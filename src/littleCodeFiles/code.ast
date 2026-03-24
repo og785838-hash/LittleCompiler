@@ -1,0 +1,75 @@
+ProgramNode:
+	ID: expr
+	VarDeclNode:
+		Type: FLOAT
+		ID: x
+		ID: y
+		ID: z
+		ID: t
+	StrDeclNode:
+		Type: STRING
+		ID: newline
+		Value: "\n"
+	FuncDeclNode:
+		ReturnType: VOID
+		ID: main
+		AssignNode:
+			Operator: ASSIGN
+			ID: x
+			FloatNode:
+				Value: 1.0
+		AssignNode:
+			Operator: ASSIGN
+			ID: y
+			FloatNode:
+				Value: 2.0
+		AssignNode:
+			Operator: ASSIGN
+			ID: z
+			FloatNode:
+				Value: 3.14159
+		WriteNode:
+			ID: x
+			ID: newline
+		WriteNode:
+			ID: z
+			ID: newline
+		WriteNode:
+			ID: y
+			ID: newline
+		AssignNode:
+			Operator: ASSIGN
+			ID: x
+			BinExprNode:
+				Operator: DIV
+				VarRefNode:
+					ID: z
+				FloatNode:
+					Value: 2.0
+		AssignNode:
+			Operator: ASSIGN
+			ID: y
+			BinExprNode:
+				Operator: DIV
+				VarRefNode:
+					ID: z
+				VarRefNode:
+					ID: y
+		WriteNode:
+			ID: x
+			ID: newline
+		WriteNode:
+			ID: y
+			ID: newline
+		AssignNode:
+			Operator: ASSIGN
+			ID: t
+			BinExprNode:
+				Operator: ADD
+				VarRefNode:
+					ID: x
+				VarRefNode:
+					ID: y
+		WriteNode:
+			ID: t
+			ID: newline

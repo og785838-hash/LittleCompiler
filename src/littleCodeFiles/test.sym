@@ -1,0 +1,10 @@
+
+Symbol table GLOBAL
+name newline type STRING value "\n"
+name t type FLOAT
+name x type FLOAT
+name y type FLOAT
+name z type FLOAT
+name main type VOID
+
+Symbol table main
